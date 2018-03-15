@@ -3351,7 +3351,7 @@
         console.log(event);
         FB.ui({
             method: 'feed',
-            link: (event.target).data('sharelink'),
+            link: $(event.target).data('sharelink'),
             caption: 'electrodomesticos',
             description: 'Electrodomesticos al mejor precio',
             picture: 'http://www.sodimac.com.pe/static/home2018/2018/feb/V4/01/cat-1-imbatible-electro.jpg',
