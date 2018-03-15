@@ -3357,9 +3357,9 @@
             picture: 'http://www.sodimac.com.pe/static/home2018/2018/feb/V4/01/cat-1-imbatible-electro.jpg',
         }, function (response) {
             if (response && !response.error_message) {
-                $('#lb_msj').text('link posteado' + response.post_id);
+                alert("posteado");
             } else {
-                $('#lb_msj').text('error ...');
+                alert("error");
             }
         });
     }
