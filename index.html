@@ -3347,11 +3347,11 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 
-    function shareStory($event) {
-        debugger
+    function shareStory(event) {
+        console.log(event);
         FB.ui({
             method: 'feed',
-            link: $($event.target).data('sharelink'),
+            link: (event.target).data('sharelink'),
             caption: 'electrodomesticos',
             description: 'Electrodomesticos al mejor precio',
             picture: 'http://www.sodimac.com.pe/static/home2018/2018/feb/V4/01/cat-1-imbatible-electro.jpg',
@@ -3362,12 +3362,13 @@
                 $('#lb_msj').text('error ...');
             }
         });
+        console.log(event);
     }
 
     function shareStory2() {
         FB.ui({
             method: 'feed',
-            link: 'https://sodimac.pe/sodimac.pe/content/a1380010/share-prueba',
+            link: 'https://haidyduenas.github.io/sodimac-share/',
             caption: 'estantes',
             description: 'los mejores estantes , solo lo mejor para tu hogar',
             picture: 'http://www.sodimac.com.pe/static/home2018/2018/feb/V4/03/banner-destacado-dkp-estante.jpg',
@@ -3419,7 +3420,7 @@
 <div class="row">
     <div class="col-md-6 product1">
         <img class="responsive" src="http://www.sodimac.com.pe/static/home2018/2018/feb/V4/01/cat-1-imbatible-electro.jpg">
-<button id="btn_" class="btn btn-link" data-sharelink="https://haidyduenas.github.io/sodimac-share/" onclick="shareStory();">
+<button id="btn_" class="btn btn-link" data-sharelink="https://haidyduenas.github.io/sodimac-share/" onclick="shareStory(event);">
             <i class="fab fa-facebook-square fa-2x" ></i>
         </button>
     </div>
